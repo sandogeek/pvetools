@@ -90,6 +90,9 @@ if [ $1 ];then
 fi
 sver=`cat /etc/debian_version |awk -F"." '{print $1}'`
 case "$sver" in
+    11 )
+        sver="bullseye"
+        ;;
     10 )
         sver="buster"
         ;;
